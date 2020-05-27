@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web page by Krisha</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+</head>
+<body>
+	<div class="container">
+
+		<div class="header">
+			<div class="logo">
+				<img src="images/Untitled-1.jpg"/>
+			</div><!---logo-close--->
+
+			<div class="menu">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Phone</a></li>
+					<li><a href="">Accessories</a></li>
+					<li><a href="">Cart</a></li>
+				</ul>
+			</div><!---menu-close--->
+		</div><!---header-section--->
+
+		<div class="information">
+			<div class="overlay"></div>
+			<div id="oval">
+
+				<div class="feature one">
+					<h2>Camera</h2>
+					<p>12Mp, Wide Angle View</p>
+				</div>
+				<div class="feature two">
+					<h2>Processor</h2>
+					<p>Snapdragon Octa-core</p>
+				</div>
+				<div class="feature three">
+					<h2>Display</h2>
+					<p>6.5" Mini-Drop Fullscreen</p>
+				</div>
+				<div class="feature four">
+					<h2>Battery</h2>
+					<p>5000mAh, 720hrs</p>
+				</div>
+			</div><!---oval-close--->
+
+			<img src="images/mob1.png" id="mobile">
+		</div><!---inforamtion-close--->
+
+		<div class="control">
+			<img src="images/arrow1.png" id="upBtn">
+			<h3>Features</h3>
+			<img src="images/arrow2.png" id="downBtn">
+		</div><!---control-close--->
+	</div><!---container-close--->
+
+	<script type="text/javascript">
+		var oval=document.getElementById("oval");
+		var upBtn=document.getElementById("upBtn");
+		var downBtn=document.getElementById("downBtn");
+		var rotateValue=oval.style.transform;
+		var rotateSum;
+
+		upBtn.onclick=function()
+		{
+			rotateSum= rotateValue+"rotate(-90deg)";
+			oval.style.transform=rotateSum;
+			rotateValue=rotateSum;
+		}
+
+		downBtn.onclick=function()
+		{
+			rotateSum= rotateValue+"rotate(+90deg)";
+			oval.style.transform=rotateSum;
+			rotateValue=rotateSum;
+		}
+
+	</script>
+</body>
+</html>
